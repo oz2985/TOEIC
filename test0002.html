@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <center><img id="mypic" src="pics/1.jpg" width="400" height="300"></center>
+            <script>
+            var pics_src = new Array("image//info1.png","image//info2.png","image//info3.png","image//info4.png",
+								"image//info5.png","image//info6.png","image//info7.png");
+
+            var num = -1;
+ 
+            slideshow_timer();
+ 
+            function slideshow_timer(){
+                if (num == 6){
+                    num = 0;
+                } 
+                else {
+                    num ++;
+                }
+                document.getElementById("mypic").src=pics_src[num];
+                setTimeout("slideshow_timer()",4000); 
+            }
+            </script>
+    </body>
